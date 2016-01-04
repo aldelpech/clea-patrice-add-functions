@@ -10,6 +10,8 @@
  * @package    clea-patrice-add-functions
  * @subpackage clea-patrice-add-functions/includes
  */
+
+add_action( 'wp_enqueue_scripts', 'clea_patrice_enqueue_scripts' ); 
  
 if (! function_exists('clea_patrice_enqueue_scripts') ){
 	function clea_patrice_enqueue_scripts() {
@@ -34,13 +36,15 @@ if (! function_exists('clea_patrice_enqueue_scripts') ){
 	
 	
 	wp_enqueue_style( 'Clea_patrice_style' ) ;
-	wp_enqueue_style( 'font_awesome_css' ) ;
+	// wp_enqueue_style( 'font_awesome_css' ) ;
 	
 	// enqueue fonts
+	/* 
 	wp_enqueue_style( 
 		'google-nova-round', 
 		'http://fonts.googleapis.com/css?family=Nova+Round'
 	);
+	*/
 	
 	// enqueue scripts
 	

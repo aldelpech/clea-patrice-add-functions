@@ -8,14 +8,14 @@
  * les fonctions d'activation, désactivation et démarrer le plugin. 
  * 
  * @link			http://parcours-performance.com/anne-laure-delpech/#ald
- * @since 			1.1.0
+ * @since 			0.1.0
  * @package			ald-functions
  *
  * @wordpress-plugin
  * Plugin Name: 	ALD fonctions pour Patrice WooCommerce
  * Plugin URI: 		http://knowledge.parcours-performance.com/creer-plugin-wordpress-de-fonctionnalites-utiles/
  * Description: 	pour modifier le thème enfant boutique du thème storefront	
- * Version: 		1.0.0
+ * Version: 		0.2.0
  * Author: 			Anne-Laure Delpech
  * Author URI: 		http://parcours-performance.com/anne-laure-delpech/#ald
  * License: 		GPL2.0+
@@ -61,7 +61,8 @@ if ( ! defined( 'WPINC' ) ) {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-css-scripts-fonts.php'; 
 	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-load-templates.php';
 	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-functions.php';
-
+	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-header-logo.php';
+	
 
 /*----------------------------------------------------------------------------*
  * deactivation and uninstall

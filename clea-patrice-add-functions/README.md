@@ -12,8 +12,11 @@ Tested up to: 4.4
 == NOTES ==
 * 
 
-== Changelog ==
 
+= Version 0.2 =
+* loads a css file for adjustments to the child theme
+* loads a logo stored in the images directory of the plugin
+* allows visualization of image Woocommerce category using enhanced media category 
 
 = Version 0.1 =
 * initialisation 
