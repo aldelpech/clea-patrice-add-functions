@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* 
+   css test du plugin ald-functions-knowledge
+   
+*/
+
+/*****
+* pour les shortcodes
+*****/
+.ald-functions-gauche, 
+.ald-functions-droite {
+	color: green ; 
+	overflow: hidden;
+	width: 95%;
+	/* padding-right: 30px;
+	padding-left: 30px; */
+}
+
+.ald-functions-gauche > .image-holder,
+.ald-functions-droite > .image-holder {
+	width: 20%;
+	line-height: 200px; /* see http://www.vanseodesign.com/css/vertical-centering/  */
+}
+
+.ald-functions-droite > .text-holder  {
+	float: right;
+	width: 75% ;
+}
+
+
+.ald-functions-droite > .image-holder {
+	float: left;
+}
+
+.ald-functions-gauche > .text-holder  {
+	float: left;
+	width: 75% ;
+}
+
+.ald-functions-gauche > .image-holder {
+	float: right;
+}
+
+
+#ald-functions > div.image-holder > a > img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border-radius: 3px ;
+	-webkit-box-shadow: 0 0 4px #eee;
+	-moz-box-shadow: 0 0 4px #eee;
+	box-shadow: 0 0 4px #eee;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	
+}
+
+#hr-ald-functions {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #eee;
+}
+
