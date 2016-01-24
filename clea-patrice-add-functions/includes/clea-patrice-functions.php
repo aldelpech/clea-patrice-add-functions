@@ -22,8 +22,6 @@ add_action( 'storefront_header', 'clea_patrice_storefront_header_content', 40 );
 * * show product categories for images
 ***************************************************/
 // Requires 2 plugins : enhanced media category and Woocommerce
-// http://code.tutsplus.com/articles/plugin-templating-within-wordpress--wp-31088
-
 
 function clea_patrice_show_img_cat() {
 
@@ -41,7 +39,6 @@ function clea_patrice_show_img_cat() {
     }
 	
 }	
-
 
 /***************************************************
 * * remove search bar
@@ -70,3 +67,32 @@ function clea_patrice_storefront_header_content() { ?>
 	</div>
 	<?php
 }
+
+/***************************************************
+* change text in 'add to cart' or 'read more' button
+
+* https://community.theme.co/forums/topic/read-more-button-on-woocommerce/
+* https://docs.woothemes.com/document/change-add-to-cart-button-text/
+
+***************************************************/
+
+
+add_filter( 'woocommerce_product_add_to_cart_text', 'clea_patrice_sold_cart_button_text' );    // 2.1 +
+ 
+function clea_patrice_sold_cart_button_text() {
+
+$custom_fields = get_post_custom( $product->ID );
+$term = $custom_fields['_stock_status'][0] ; // 'outofstock' or 'instock'
+
+
+	if ( "outofstock" == $term ) {
+		return __( 'Détails', 'woocommerce' );
+	} else {
+		return __( 'Ajouter au Panier', 'woocommerce' );		
+	}
+
+}
+
+
+
+

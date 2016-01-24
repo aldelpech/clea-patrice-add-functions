@@ -8,7 +8,7 @@
  * les fonctions d'activation, désactivation et démarrer le plugin. 
  * 
  * @link			http://parcours-performance.com/anne-laure-delpech/#ald
- * @since 			0.1.0
+ * @since 			1.0.0
  * @package			ald-functions
  *
  * @wordpress-plugin
@@ -60,8 +60,8 @@ if ( ! defined( 'WPINC' ) ) {
 
 	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-css-scripts-fonts.php'; 
 	// require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-load-templates.php';
-	// require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-functions.php';
-	// require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-header-logo.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-functions.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-header-logo.php';
 	require_once plugin_dir_path( __FILE__ ) . 'includes/clea-patrice-soldout-page.php';
 
 

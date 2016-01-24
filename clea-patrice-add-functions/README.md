@@ -12,6 +12,10 @@ Tested up to: 4.4
 == NOTES ==
 * 
 
+
+= Version 1.0 =
+* added new content for "read more" button of sold out products.
+
 = Version 0.4 =
 * The search zone in the header is removed
 * a zone is in the header with fixed content (phone number and encoded email)

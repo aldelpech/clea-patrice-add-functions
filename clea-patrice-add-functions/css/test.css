@@ -10,8 +10,16 @@
 
 @media screen and (min-width: 768px) {
 	.main-navigation ul li a, ul.menu li a {
-    color: #cecece!important;
+		color: #cecece!important;
 	}
+
+	.site-header .site-logo-link {
+		width: auto !important;
+	}
+}
+
+.site-header .site-branding {
+    width: 40% !important;
 }
 
 .site-title a {
@@ -29,6 +37,14 @@
 .clea-adresse p {
     margin-bottom: 0;
 }
+
+/*****
+* titres des pages
+*****/
+header.entry-header {
+    display: none;
+}
+
 
 /*****
 * galerie avec produits vendus
@@ -63,4 +79,9 @@ table.cart .product-thumbnail img {
     max-width: 2.618em;
 }
 
-
+/*****
+* widget livraison
+*****/
+a.formulaire {
+    text-decoration: underline;
+}

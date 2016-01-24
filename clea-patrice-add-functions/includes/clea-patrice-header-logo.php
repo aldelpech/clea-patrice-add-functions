@@ -5,14 +5,13 @@
  *
  *
  * @link       	http://parcours-performance.com/anne-laure-delpech/#ald
- * @since      	1.2.0
+ * @since      	1.0.0
  *
  * @package    clea-patrice-add-functions
  * @subpackage clea-patrice-add-functions/includes
  */
 
  
-
 
 add_action( 'init', 'clea_patrice_storefront_site_branding' );
 
@@ -38,9 +37,7 @@ function clea_storefront_display_custom_logo() {
 	?>		
 				
 	<div class="site-branding">
-			<a href="<?php esc_attr( get_site_url() ) ;?>">
-				<img class="alignnone size-medium ald-unique-logo" src="<?php echo CLEA_PATRICE_URL . 'images/patin.png' ; ?>" alt="logo" width="90px" height="50px" />
-			</a>
+		<?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
 			<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
