@@ -140,3 +140,4 @@ function change_stock_message($message, $stock_status) {
     }
     return $message;
 }
+?>

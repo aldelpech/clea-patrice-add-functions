@@ -54,3 +54,5 @@ if (! function_exists('clea_patrice_enqueue_scripts') ){
 
 // see http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
 add_action( 'wp_enqueue_scripts', 'ald_enqueue_scripts' );  // to enqueue in the website front end
+
+?>

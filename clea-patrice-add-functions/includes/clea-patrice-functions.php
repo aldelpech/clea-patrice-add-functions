@@ -92,7 +92,4 @@ $term = $custom_fields['_stock_status'][0] ; // 'outofstock' or 'instock'
 	}
 
 }
-
-
-
-
+?>

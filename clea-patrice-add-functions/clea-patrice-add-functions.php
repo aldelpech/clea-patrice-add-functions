@@ -82,3 +82,4 @@ if ( ! defined( 'WPINC' ) ) {
 		// actions to perform once on plugin uninstall go here
 		// remove all options and custom tables
 	}
+?>

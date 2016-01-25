@@ -49,4 +49,4 @@ function clea_storefront_display_custom_logo() {
 
 
 
-?>	
+?>
