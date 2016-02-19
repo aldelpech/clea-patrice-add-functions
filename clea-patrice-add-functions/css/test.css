@@ -89,3 +89,11 @@ table.cart .product-thumbnail img {
 a.formulaire {
     text-decoration: underline;
 }
+
+/*****
+* star rating
+*****/
+.star-rating span:before, .widget-area .widget a:hover, .product_list_widget a:hover, .quantity .plus, .quantity .minus, p.stars a:hover:after, p.stars a:after, .star-rating span:before {
+    color: #FFD700 !important;
+}
+
