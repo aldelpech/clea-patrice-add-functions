@@ -11,7 +11,7 @@
  * @subpackage clea-patrice-add-functions/includes
  */
 
-add_action( 'wp_enqueue_scripts', 'clea_patrice_enqueue_scripts' ); 
+add_action( 'wp_enqueue_scripts', 'clea_patrice_enqueue_scripts', 1010 ); 
  
 if (! function_exists('clea_patrice_enqueue_scripts') ){
 	function clea_patrice_enqueue_scripts() {
