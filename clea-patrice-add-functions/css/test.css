@@ -16,11 +16,18 @@
 	.site-header .site-logo-link {
 		width: auto !important;
 	}
+
+	.site-header {
+    padding-top: 1.236em; 
+	}
 }
 
 .site-header .site-branding {
     width: 40% !important;
 }
+
+
+
 
 .site-title a {
 	display: inline-block;
@@ -41,6 +48,12 @@
 .boutique-primary-navigation {
     background: #212121 !important;
 }
+
+.site-header-cart .cart-contents:after {
+    position: initial;
+    padding-left: 1em;
+}
+
 
 /*****
 * titres des pages
