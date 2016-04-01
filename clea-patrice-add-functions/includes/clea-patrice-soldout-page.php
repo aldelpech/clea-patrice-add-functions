@@ -140,4 +140,72 @@ function change_stock_message($message, $stock_status) {
     }
     return $message;
 }
+
+/*
+* a shortcode to display IN stock products
+* 
+* same as the shortcode for out of stock products
+*/
+
+
+function clea_patrice_en_vente_shortcode( $atts ) {
+
+    global $woocommerce_loop;
+
+    extract(shortcode_atts(array(
+        'per_page'  => '12',
+        'columns'   => '3',
+        'orderby' => 'date',
+        'order' => 'desc'
+    ), $atts));
+
+    $woocommerce_loop['columns'] = $columns;
+
+    $args = array(
+        'post_type' => 'product',
+        'post_status' => 'publish',
+        'ignore_sticky_posts'   => 1,
+        'posts_per_page' => $per_page,
+        'orderby' => $orderby,
+        'order' => $order,
+        'meta_query' => array(
+			array(
+				'key' 		=> '_visibility',
+				'value' 	=> array('catalog', 'visible'),
+				'compare' 	=> 'IN'
+			),
+			array(
+				'key' => '_stock_status',
+				'value' => 'instock',
+				'compare' => '='
+			)
+        )
+    );
+	
+	// Buffer our contents
+	ob_start();
+		do_action( 'woocommerce_before_shop_loop' );
+		$loop = new WP_Query( $args );
+			if ( $loop->have_posts() ) {
+				while ( $loop->have_posts() ) : $loop->the_post();
+					wc_get_template_part( 'content', 'product' );
+				endwhile;
+			} else {
+				echo __( 'No products found' );
+			}
+		wp_reset_postdata();
+		do_action( 'woocommerce_after_shop_loop' );
+	// Return buffered contents
+    return '<ul class="products">' . ob_get_clean() . '</ul>';
+}
+
+add_shortcode('produits_a_vendre', 'clea_patrice_en_vente_shortcode');
+
+
+
+
+
+
+
+
 ?>
