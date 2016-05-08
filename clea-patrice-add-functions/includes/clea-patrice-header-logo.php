@@ -37,7 +37,11 @@ function clea_storefront_display_custom_logo() {
 	?>		
 				
 	<div class="site-branding">
-		<?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
+		<a href="http://bwatbase.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="90" height="50" src="http://bwatbase.com/wp-content/uploads/2016/01/patin.png" class="custom-logo" alt="Bwatbase Patrice poiraud Logo" itemprop="logo" data-pin-nopin="true"></a>
+		<!---
+		<?php // if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
+		-->
+		
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
 			<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>

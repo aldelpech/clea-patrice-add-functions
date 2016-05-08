@@ -5,6 +5,41 @@
 */
 
 /*****
+* body et couleurs
+*****/
+body {
+	background: white;
+}
+
+.storefront-primary-navigation {
+	background-color: white;
+}
+
+.site-header {
+	background-color: white;
+}
+
+@media (min-width: 768px) {
+	.site-header .custom-logo-link img {
+		height: 50px;
+		width: 90px;
+	}	
+	
+	.site-header .site-branding {
+		margin-bottom: 0.618em;
+	}
+}
+
+h1.site-title {
+	display: inline-block;
+}
+
+.secondary-navigation {
+	display: none;
+}
+
+
+/*****
 * Header et Navigation secondaire
 *****/
 
