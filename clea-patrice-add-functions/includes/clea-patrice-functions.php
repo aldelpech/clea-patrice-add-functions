@@ -17,6 +17,16 @@ add_action( 'init', 'clea_patrice_remove_storefront_header_search' );
 add_action( 'storefront_header', 'clea_patrice_storefront_header_content', 40 );
 add_filter( 'woocommerce_get_catalog_ordering_args', 'clea_patrice_get_catalog_ordering_args' );
 
+/***************************************************
+* * support for WordPress Logo (since wp 4.5)
+***************************************************/
+add_theme_support( 'custom-logo', array(
+	'height'      => 90,
+	'width'       => 50,
+	// 'flex-height' => true,
+	'flex-width'  => true,
+	// 'header-text' => array( 'site-title', 'site-description' ),
+) );
 
 /***************************************************
 * * show product categories for images

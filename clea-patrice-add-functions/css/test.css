@@ -23,6 +23,7 @@ body {
 	.site-header .custom-logo-link img {
 		height: 50px;
 		width: 90px;
+		margin-right: 10px;
 	}	
 	
 	.site-header .site-branding {

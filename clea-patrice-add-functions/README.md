@@ -12,6 +12,7 @@ Tested up to: 4.4
 == NOTES ==
 * 
 
+* header displays WP custom_logo and title and site description
 * added random sorting for the product loop in includes/clea-patrice-functions.php
 
 = Version 1.0 =

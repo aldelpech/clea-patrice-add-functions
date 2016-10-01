@@ -18,7 +18,8 @@ add_action( 'init', 'clea_patrice_storefront_site_branding' );
 
 /***************************************************
 * * add a logo to the default storefront theme
-* see https://docs.woothemes.com/document/add-a-custom-logo/
+* see /themes/storefront/incstorefront-template-functions.php
+*  storefront_site_title_or_logo function
 ***************************************************/
 if ( ! function_exists( 'clea_patrice_storefront_site_branding' ) ) {
 
@@ -37,10 +38,8 @@ function clea_storefront_display_custom_logo() {
 	?>		
 				
 	<div class="site-branding">
-		<a href="http://bwatbase.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="90" height="50" src="http://bwatbase.com/wp-content/uploads/2016/01/patin.png" class="custom-logo" alt="Bwatbase Patrice poiraud Logo" itemprop="logo" data-pin-nopin="true"></a>
-		<!---
-		<?php // if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
-		-->
+		
+		<?php the_custom_logo(); ?>
 		
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
@@ -48,7 +47,7 @@ function clea_storefront_display_custom_logo() {
 		<?php } ?>
 	</div>
 	<?php
-
+	
 }
 
 
