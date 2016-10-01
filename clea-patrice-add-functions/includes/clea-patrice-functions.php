@@ -15,7 +15,7 @@
 add_action( 'wp_loaded', 'clea_patrice_show_img_cat');
 add_action( 'init', 'clea_patrice_remove_storefront_header_search' );
 add_action( 'storefront_header', 'clea_patrice_storefront_header_content', 40 );
-
+add_filter( 'woocommerce_get_catalog_ordering_args', 'clea_patrice_get_catalog_ordering_args' );
 
 
 /***************************************************
@@ -92,4 +92,33 @@ $term = $custom_fields['_stock_status'][0] ; // 'outofstock' or 'instock'
 	}
 
 }
+
+/***************************************************
+* Add a 'random' order option
+
+* https://docs.woocommerce.com/document/custom-sorting-options-ascdesc/
+
+***************************************************/
+function clea_patrice_get_catalog_ordering_args( $args ) {
+
+	$orderby_value = isset( $_GET['orderby'] ) ? woocommerce_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+
+	if ( 'random_list' == $orderby_value ) {
+		$args['orderby'] = 'rand';
+		$args['order'] = '';
+		$args['meta_key'] = '';
+	}
+
+	return $args;
+}
+
+add_filter( 'woocommerce_default_catalog_orderby_options', 'clea_patrice_custom_catalog_orderby' );
+add_filter( 'woocommerce_catalog_orderby', 'clea_patrice_custom_catalog_orderby' );
+
+function clea_patrice_custom_catalog_orderby( $sortby ) {
+	$sortby['random_list'] = 'Random';
+	return $sortby;
+}
+
+
 ?>

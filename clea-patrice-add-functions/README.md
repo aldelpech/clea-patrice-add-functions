@@ -12,6 +12,7 @@ Tested up to: 4.4
 == NOTES ==
 * 
 
+* added random sorting for the product loop in includes/clea-patrice-functions.php
 
 = Version 1.0 =
 * added new content for "read more" button of sold out products.
